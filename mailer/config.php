@@ -1,4 +1,5 @@
 <?php
+   curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
     $name 		= $_POST['name'];
     $email 		= $_POST['email'];
     $subject 	= $_POST['subject'];
