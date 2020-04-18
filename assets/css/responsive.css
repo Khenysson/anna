@@ -977,7 +977,9 @@
 {
 
 .logo{
-    width: 30px;
+    width: 50px;
+    padding-top: 5px;
+    margin-right: 20px;
 }
 #logo-mob{
     display: block !important;

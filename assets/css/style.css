@@ -1564,13 +1564,17 @@ nav.navbar.bootsnav {
     /* color: #093542 /* #cd0fd8 */ 
 }
 
+.navbar-brand{
 
+    padding: 0px !important;
+}
 
 
 .logo{
-    width: 50px; 
+    width: 70px; 
     height: auto;
 } 
+
 
 img{
     border-radius: 5px !important;
