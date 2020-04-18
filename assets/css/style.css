@@ -98,17 +98,17 @@ h1,
 }
 
 h1 {
-    font-size: 50px;
+    font-size:  50px;
     line-height: 60px;
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 35px;
     line-height: 40px
 }
 
 h3 {
-    font-size: 24px;
+    font-size: 30px;
     line-height: 34px
 }
 
@@ -128,7 +128,7 @@ h6 {
 }
 
 p {
-    font-size: 14px;
+    font-size: 17px;
     color: #777777;
     line-height: 24px;
     font-weight: 500
@@ -203,8 +203,8 @@ blockquote {
     -webkit-transition: 0.5s;
     transition: 0.5s;
     background-size: 200% auto;
-    background-image: -webkit-gradient(linear, left top, right top, from(#3A5D66), color-stop(51%, #093542), to(#3A5D66));
-    background-image: linear-gradient(to right, #3A5D66 0%, #093542 51%, #3A5D66 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from(#DA9B02), color-stop(51%, #FDB812), to(#DA9B02));
+    background-image: linear-gradient(to right, #DA9B02 0%, #FDB812 51%, #DA9B02 100%);
 }
 
 .gradient-bg-1:hover {
@@ -333,8 +333,8 @@ nav.navbar.bootsnav ul.nav > li > a:hover {
 }
 
 .attr-nav > ul > li > a {
-    background-color: #fff;
-    color: #093542;
+    background-color: #FDB812;
+    color: #fff;
     /* color: #093542 /* #cd0fd8 */; 
     padding: 8px 15px;
     border-radius: 25px;
@@ -388,7 +388,7 @@ nav.navbar.bootsnav {
 
 .caption-btn a {
     display: inline-block;
-    border: 2px solid #fff;
+    border: 2px solid #FDB812;
     margin: 0 15px 0 0;
     padding: 10px 40px;
     border-radius: 25px;
@@ -397,8 +397,8 @@ nav.navbar.bootsnav {
 }
 
 .caption-btn a:hover {
-    background-color: #fff;
-    color: #093542
+    background-color: #FDB812;
+    color: #ffffff
     /* color: #093542 /* #cd0fd8 */ 
 }
 
@@ -647,10 +647,10 @@ nav.navbar.bootsnav {
 
 .video-popup-icon a {
     font-size: 50px;
-    color: #093542 /* #cd0fd8 */;
+    color: #fff /* #cd0fd8 */;
     border-radius: 50%;
     display: inline-block;
-    background-color: #fff;
+    background-color: #FDB812;
     width: 80px;
     height: 80px;
     line-height: 80px;
@@ -659,8 +659,8 @@ nav.navbar.bootsnav {
 }
 
 .video-popup-icon a:hover {
-    color: #fff;
-    background: #093542 /* #cd0fd8 */
+    color: #FDB812;
+    background: #fff /* #cd0fd8 */
 }
 
 .video-popup-icon {
@@ -880,15 +880,15 @@ nav.navbar.bootsnav {
 
 .arrow-line .round-circle {
     height: 32px;
-    border: 2px solid #3A5D66;
+    border: 2px solid #DA9B02;
     width: 1px;
     height: 110px;
     margin: 0 auto
 }
 
 .arrow-line .round-circle::after {
-    background: #093542 /* #cd0fd8 */;
-    border: 3px solid #dfeafd;
+    background: #FDB812 /* #cd0fd8 */;
+    border: 3px solid #DA9B02;
     border-radius: 50%;
     bottom: -13px;
     content: "";
@@ -1033,7 +1033,7 @@ nav.navbar.bootsnav {
     font-family: 'IcoFont';
     content: "\eb7a";
     float: right;
-    color: #8744EA;
+    color: #DA9B02;
 }
 
 .panel-heading .accordion-toggle.collapsed:after {
@@ -1560,7 +1560,7 @@ nav.navbar.bootsnav {
 }
 
 .widget.categories li a:hover {
-    color: #FDB812;
+    color:  #FDB812;
     /* color: #093542 /* #cd0fd8 */ 
 }
 
@@ -1570,4 +1570,12 @@ nav.navbar.bootsnav {
 .logo{
     width: 50px; 
     height: auto;
+} 
+
+img{
+    border-radius: 5px !important;
+}
+
+.how-work-btn > span{
+    border-radius: 5px !important;
 }

@@ -5,7 +5,7 @@
     $message 		= $_POST['message'];
     $output 	= "Name: ".$name."\n\n Email: ".$email."\n\n Subject: ".$subject."\n\n Message: ".$message;
     //set your email address to receive messages
-    $to 		= 'youremail@gmail.com';
+    $to 		= 'khenysson@hotmail.com';
     $headers	= 'Para: "'.$email.'"';
 
     // Send the email.
