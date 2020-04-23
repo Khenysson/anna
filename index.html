@@ -22,11 +22,13 @@
 					<meta property="og:type" content="website">
 					<meta property="og:title" content="AnnA | Assistente de aprendizado">
 					<meta property="og:description" content="Conheça AnnA, uma assistente virtual que, através de diálogos, lhe ajudará nessa fase desafiadora da COVID-19  através de prática e hábitos que influenciam positivamente sua saúde mental e física! Vamos conversar?">
-					<meta property="og:url" content="http://www.eusouanna.com.br/">
-					<meta property="og:image" content="www.seusite.com.br/assets/images/logo-desktop.png">
+					<meta property="og:url" content="https://www.eusouanna.com.br/">
+					<meta property="og:image" content="www.eusouanna.com.br/assets/images/logo-desktop.png">
 					<meta property="og:image:type" content="image/png">
 					<meta property="og:image:width" content="500">
 					<meta property="og:image:height" content="500">
+					<meta name="grecaptcha-key" content="6LfGo-kUAAAAALH12UMrTuvmMaHcZrtuq15HSlmv">
+					<script src="https://www.google.com/recaptcha/api.js?render=6LfGo-kUAAAAALH12UMrTuvmMaHcZrtuq15HSlmv"></script>
 					<title>AnnA | Assistente de aprendizado</title>
 					<!--Favicon-->
 					<link rel="shortcut icon" type="image/png" href="assets/images/logo-mob.png">
@@ -51,6 +53,11 @@
 					<link rel="icon" href="assets/images/logo-mob.png" />
 					<!--Modanizr JS-->
 					<script src="assets/js/modernizr.custom.js"></script>
+					<!-- LightBox -->
+					<link rel="stylesheet" href="assets/dist/remodal.css">
+					<link rel="stylesheet" href="assets/dist/remodal-default-theme.css">
+					<!-- Parsley.js -->
+					<script src="parsley.min.js"></script>
 					<!--[if IE]>
 					<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 					<![endif]-->
@@ -62,24 +69,42 @@
 						gtag('js', new Date());
 						
 						gtag('config', 'UA-162380751-3');
-                    </script>
-                    <!-- Facebook Pixel Code -->
-                    <script>
-                        !function(f,b,e,v,n,t,s)
-                        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-                        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-                        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-                        n.queue=[];t=b.createElement(e);t.async=!0;
-                        t.src=v;s=b.getElementsByTagName(e)[0];
-                        s.parentNode.insertBefore(t,s)}(window, document,'script',
-                        'https://connect.facebook.net/en_US/fbevents.js');
-                        fbq('init', '2934289686659501');
-                        fbq('track', 'PageView');
-                    </script>
-                    <noscript><img height="1" width="1" style="display:none"
-                        src="https://www.facebook.com/tr?id=2934289686659501&ev=PageView&noscript=1"
-                    /></noscript>
-                    <!-- End Facebook Pixel Code -->
+						              
+					</script>
+					<!-- Facebook Pixel Code -->
+					<script>
+						!function(f,b,e,v,n,t,s)
+						{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+						n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+						if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+						n.queue=[];t=b.createElement(e);t.async=!0;
+						t.src=v;s=b.getElementsByTagName(e)[0];
+						s.parentNode.insertBefore(t,s)}(window, document,'script',
+						'https://connect.facebook.net/en_US/fbevents.js');
+						fbq('init', '2934289686659501');
+						fbq('track', 'PageView');
+					</script>
+					<noscript><img height="1" width="1" style="display:none"
+						src="https://www.facebook.com/tr?id=2934289686659501&ev=PageView&noscript=1"
+						/></noscript>
+					<!-- End Facebook Pixel Code -->
+					<style>
+						.remodal-bg.with-red-theme.remodal-is-opening,
+						.remodal-bg.with-red-theme.remodal-is-opened {
+						filter: none;
+						}
+						.remodal-overlay.with-red-theme {
+						background-color: #f44336;
+						}
+						.remodal.with-red-theme {
+						background: #fff;
+						}
+					</style>
+					<style>
+						.content_hidden{
+							display: none;
+						}
+					</style>
 				</head>
 				<body>
 					<!--Start Preloader-->
@@ -99,7 +124,7 @@
 									<!-- Start Atribute Navigation -->
 									<div class="attr-nav">
 										<ul>
-											<li><a href="#app-download"><i class="icofont icofont-download-alt"></i> Download</a></li>
+											<li><a class="gradient-bg-1" href="#modal"><i class="icofont icofont-download-alt"></i> Download</a></li>
 										</ul>
 									</div>
 									<!-- End Atribute Navigation -->
@@ -153,11 +178,42 @@
 												<a class="font-600" href="#app-download">Download</a><a class="font-600" href="#about">Saiba mais</a>
 												</div> -->
 											<div class="about-btn btn-lg p-0 wow fadeInUp" data-wow-delay="0.3s">
-												<a class="gradient-bg-1" href="https://play.google.com/store/apps/details?id=br.com.qualinfo.h3skills" target="_blank"><i class="icofont icofont-brand-android-robot float-left"></i><span class="float-right text-center font-w-700"><small>Disponível na<br></small> Google Play</span></a><a class="gradient-bg-1" href="https://apps.apple.com/us/app/anna/id1482704535" target="_blank"><i class="icofont icofont-brand-apple float-left"></i><span class="float-right text-center font-w-700"><small>Disponível na<br></small> Apple Store</span></a>
+												<div class="remodal-bg">
+													<a class="gradient-bg-1" href="#modal" style="font-size: 25px ;"><i class="icofont icofont-download-alt" style="font-size: 25px;"></i> Baixar agora mesmo!</a>
+													<br><br>
+												</div>
+												<!-- <a class="gradient-bg-1" href="https://play.google.com/store/apps/details?id=br.com.qualinfo.h3skills" target="_blank"><i class="icofont icofont-brand-android-robot float-left"></i><span class="float-right text-center font-w-700"><small>Disponível na<br></small> Google Play</span></a><a class="gradient-bg-1" href="https://apps.apple.com/us/app/anna/id1482704535" target="_blank"><i class="icofont icofont-brand-apple float-left"></i><span class="float-right text-center font-w-700"><small>Disponível na<br></small> Apple Store</span></a> -->
 											</div>
 										</div>
 									</div>
 									<!--End Banner Caption-->
+									<!-- LightBox -->
+									<div class="remodal" data-remodal-id="modal" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc" style="background: #093542 !important;
+									background: linear-gradient(-45deg, #3A5D66 0%, #093542 100%) !important;">
+										<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+						
+											<h2 style="color: white !important;" id="modal1Title" >Cadastre-se abaixo para fazer o download do app!</h2>
+											<form action="https://eusouanna.h3skills.com/api/v1/create_collaborator" method="post" enctype="multipart/form-data">
+											<div class="col-md-6 col-md-offset-3" style="padding-top: 60px !important;">
+												<div class="form-group">
+												<!-- NOME COMPLETO -->
+												<!-- <label>Nome completo</label> -->
+												<input class="form-control" type="text" name="name" placeholder="Nome Completo" required>
+											</div>
+											<div class="form-group">
+												<!-- E-MAIL -->
+												<!-- <label>E-mail</label> -->
+												<input class="form-control" type="email" name="email" placeholder="E-mail" required>
+											</div>
+												<!-- TOKEN DO CAPTCHAGOOGLE-->
+												<input id="recaptchaResponse" name="recaptcha_token" type="hidden">
+												<!-- BOTÃO DE CADASTRAR -->
+												<br><br>
+												<button id="submit_button" class="gradient-bg-1 btn btn-lg content_hidden" style="color: #ffffff; " type="submit" value="Enviar">Enviar</button>
+											</div>
+											</form>
+										<br>
+									</div>
 									<!--Start Banner Image-->
 									<div class="col-md-6">
 										<div class="banner-img wow fadeIn" data-wow-delay="0.4s">
@@ -203,7 +259,7 @@
 											<h3 class="font-700 wow fadeInUp" data-wow-delay="0.1s">Veja o que você pode fazer junto com AnnA:</h3>
 											<!-- <p class="wow fadeInUp" data-wow-delay="0.2s" data-wow-delay="0.1s">Veja o que Anna pode fazer por você:</p> -->
 											<p class="wow fadeInUp" data-wow-delay="0.2s">- Auto-avaliação dos sintomas do COVID19.
-<br><br>
+												<br><br>
 												- Estratégias para prevenção.
 												<br><br>
 												- Monitoramento do estado físico e emocional durante todo o período de isolamento.
@@ -288,8 +344,8 @@
 							<!--End Container
 							</section>
 							<!--End Features Section
-						<!--Start Why Choose Section
-						<section id="why-choose" class="bg-gray">
+							<!--Start Why Choose Section
+							<section id="why-choose" class="bg-gray">
 							<!--Start Container
 							<div class="container">
 								<!--Start Row
@@ -345,8 +401,8 @@
 								<!--End Row
 							</div>
 							<!--End Container
-						</section>
-						<!--End Why Choose Section-->
+							</section>
+							<!--End Why Choose Section-->
 						<!--Start App Screenshots Section-->
 						<section id="app-screenshot">
 							<!--Start Container-->
@@ -367,11 +423,14 @@
 								<!--End Heading Row-->
 								<!--Start Screenshots Slider-->
 								<div class="screenshots-slider owl-carousel wow fadeIn" data-wow-delay="0.1s">
-									<img src="assets/images/1.png" class="img-responsive" alt="Image">
-									<img src="assets/images/2.png" class="img-responsive" alt="Image">
-									<img src="assets/images/3.png" class="img-responsive" alt="Image">
-									<img src="assets/images/4.jpg" class="img-responsive" alt="Image">
-									<img src="assets/images/5.jpg" class="img-responsive" alt="Image">
+									<img src="assets/images/1-1.jpg" class="img-responsive" alt="Image">
+									<img src="assets/images/1-2.jpg" class="img-responsive" alt="Image">
+									<img src="assets/images/1-3.jpg" class="img-responsive" alt="Image">
+									<img src="assets/images/1-4.jpg" class="img-responsive" alt="Image">
+									<img src="assets/images/1-5.jpg" class="img-responsive" alt="Image">
+									<img src="assets/images/1-6.jpg" class="img-responsive" alt="Image">
+									<img src="assets/images/1-7.jpg" class="img-responsive" alt="Image">
+									<img src="assets/images/1-8.jpg" class="img-responsive" alt="Image">
 								</div>
 								<!--End Screenshots Slider-->
 							</div>
@@ -700,7 +759,7 @@
 													</h4>
 												</div>
 												<div id="collapse1" class="panel-collapse collapse in">
-													<div class="font-500 panel-body">Fico feliz em saber que está interassado(a) em mim!! Acesse sua loja de aplicativos ou clique <a href="#app-download">aqui</a> para baixar e divirta-se!</div>
+													<div class="font-500 panel-body">Clique aqui: xxxxxxxxxxxxxxxxxxxxxxx </div>
 												</div>
 											</div>
 											<!--End Accordian Single-->
@@ -714,7 +773,7 @@
 												<div id="collapse2" class="panel-collapse collapse">
 													<div class="font-500 panel-body">Preciso pagar algo pra acessar AnnA?
 														Não. O aplicativo estará disponível gratuitamente enquanto durar o isolamento social causado pela pandemia.
-														</div>
+													</div>
 												</div>
 											</div>
 											<!--End Accordian Single-->
@@ -727,7 +786,7 @@
 												</div>
 												<div id="collapse3" class="panel-collapse collapse">
 													<div class="font-500 panel-body">Sim. O aplicativo obedece a Lei Geral de Proteção de Dados, respeitando o sigilo e privacidade das suas informações. 
-														</div>
+													</div>
 												</div>
 											</div>
 											<!--End Accordian Single-->
@@ -740,9 +799,8 @@
 												</div>
 												<div id="collapse4" class="panel-collapse collapse">
 													<div class="font-500 panel-body">
-														
 														Sim, por meio de uma auto-avaliação validada por especialistas.
-														</div>
+													</div>
 												</div>
 											</div>
 											<!--End Accordian Single-->
@@ -755,7 +813,6 @@
 												</div>
 												<div id="collapse5" class="panel-collapse collapse">
 													<div class="font-500 panel-body">Não. AnnA auxilia pessoas a explorar seus potenciais e desenvolver novas atitudes e habilidades. Se você sente que precisa de terapia, sugerimos procurar um profissional qualificado.
-
 													</div>
 												</div>
 											</div>
@@ -770,7 +827,6 @@
 												<div id="collapse6" class="panel-collapse collapse">
 													<div class="font-500 panel-body">Em que AnnA pode me ajudar?
 														Além lhe fazer companhia, Anna pode lhe ajudar lhe ajudar a lidar com esse momento, enquanto aguardamos ele passar, dando suporte emocional, contribuindo para seu equilíbrio e ajudando a criar novos hábitos saudáveis. 
-														
 													</div>
 												</div>
 											</div>
@@ -844,95 +900,95 @@
 						</section>
 						<!--End Faq Section-->
 						<!--Start Testimonial Section
-						<section id="testimonial" class="gradient-bg">
-							<!--Start Container
-							<div class="container">
-								<!--Start Heading Row
-								<div class="row">
-									<!--Start Heading Content
-									<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-										<div class="section-heading text-center">
-											<h2 class="font-700 color-white text-uppercase wow fadeInUp" data-wow-delay="0.1s">Depoimentos</h2>
-											<p class="color-white wow fadeInUp" data-wow-delay="0.2s">Um pouco do que as pessoas falam sobre mim.</p>
+							<section id="testimonial" class="gradient-bg">
+								<!--Start Container
+								<div class="container">
+									<!--Start Heading Row
+									<div class="row">
+										<!--Start Heading Content
+										<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+											<div class="section-heading text-center">
+												<h2 class="font-700 color-white text-uppercase wow fadeInUp" data-wow-delay="0.1s">Depoimentos</h2>
+												<p class="color-white wow fadeInUp" data-wow-delay="0.2s">Um pouco do que as pessoas falam sobre mim.</p>
+											</div>
 										</div>
+										<!--End Heading Content
 									</div>
-									<!--End Heading Content
-								</div>
-								<!--End Heading Row-->
-								<!--Start Testimonial Row
-								<div class="row">
-									<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-										<!--Start Testimonial Carousel
-										<div class="testimonial-carousel owl-carousel">
-											<!--Start Testimonial Single
-											<div class="testimonial-single row">
-												<div class="col-sm-3">
-													<div class="client-info text-center wow fadeInUp" data-wow-delay="0.1s">
-														<img src="assets/images/client-2.jpg" alt="">
-														<h4 class="font-600">Emma Smith</h4>
-														<p>Marketer</p>
-													</div>
-												</div>
-												<div class="col-sm-1">
-													<div class="testimonial-border"></div>
-												</div>
-												<div class="col-sm-8">
-													<div class="client-comment">
-														<p class="wow fadeInUp" data-wow-delay="0.1s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, quam! Distinctio fugit asperiores, tenetur enim sint neque animi provident atque sed labore delectus esse repellat illum ea, in iste. Ratione!</p>
-														<span class="wow fadeInUp" data-wow-delay="0.2s"><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i></span><span class="float-right"><i class="icofont icofont-quote-right"></i></span>
-													</div>
+									<!--End Heading Row-->
+						<!--Start Testimonial Row
+							<div class="row">
+								<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+									<!--Start Testimonial Carousel
+									<div class="testimonial-carousel owl-carousel">
+										<!--Start Testimonial Single
+										<div class="testimonial-single row">
+											<div class="col-sm-3">
+												<div class="client-info text-center wow fadeInUp" data-wow-delay="0.1s">
+													<img src="assets/images/client-2.jpg" alt="">
+													<h4 class="font-600">Emma Smith</h4>
+													<p>Marketer</p>
 												</div>
 											</div>
-											<!--End Testimonial Single
-											<!--Start Testimonial Single
-											<div class="testimonial-single row">
-												<div class="col-sm-3">
-													<div class="client-info text-center">
-														<img src="assets/images/client-1.jpg" alt="">
-														<h4 class="font-600">Jack Morkel</h4>
-														<p>Developer</p>
-													</div>
-												</div>
-												<div class="col-sm-1">
-													<div class="testimonial-border"></div>
-												</div>
-												<div class="col-sm-8">
-													<div class="client-comment">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, quam! Distinctio fugit asperiores, tenetur enim sint neque animi provident atque sed labore delectus esse repellat illum ea, in iste. Ratione!</p>
-														<span><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i></span><span class="float-right"><i class="icofont icofont-quote-right"></i></span>
-													</div>
+											<div class="col-sm-1">
+												<div class="testimonial-border"></div>
+											</div>
+											<div class="col-sm-8">
+												<div class="client-comment">
+													<p class="wow fadeInUp" data-wow-delay="0.1s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, quam! Distinctio fugit asperiores, tenetur enim sint neque animi provident atque sed labore delectus esse repellat illum ea, in iste. Ratione!</p>
+													<span class="wow fadeInUp" data-wow-delay="0.2s"><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i></span><span class="float-right"><i class="icofont icofont-quote-right"></i></span>
 												</div>
 											</div>
-											<!--End Testimonial Single
-											<!--Start Testimonial Single
-											<div class="testimonial-single row">
-												<div class="col-sm-3">
-													<div class="client-info text-center">
-														<img src="assets/images/client-3.jpg" alt="">
-														<h4 class="font-600">Jhon Doe</h4>
-														<p>Designer</p>
-													</div>
-												</div>
-												<div class="col-sm-1">
-													<div class="testimonial-border"></div>
-												</div>
-												<div class="col-sm-8">
-													<div class="client-comment">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, quam! Distinctio fugit asperiores, tenetur enim sint neque animi provident atque sed labore delectus esse repellat illum ea, in iste. Ratione!</p>
-														<span><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i></span><span class="float-right"><i class="icofont icofont-quote-right"></i></span>
-													</div>
-												</div>
-											</div>
-											<!--End Testimonial Single
 										</div>
-										<!--End Testimonial Carousel
+										<!--End Testimonial Single
+										<!--Start Testimonial Single
+										<div class="testimonial-single row">
+											<div class="col-sm-3">
+												<div class="client-info text-center">
+													<img src="assets/images/client-1.jpg" alt="">
+													<h4 class="font-600">Jack Morkel</h4>
+													<p>Developer</p>
+												</div>
+											</div>
+											<div class="col-sm-1">
+												<div class="testimonial-border"></div>
+											</div>
+											<div class="col-sm-8">
+												<div class="client-comment">
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, quam! Distinctio fugit asperiores, tenetur enim sint neque animi provident atque sed labore delectus esse repellat illum ea, in iste. Ratione!</p>
+													<span><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i></span><span class="float-right"><i class="icofont icofont-quote-right"></i></span>
+												</div>
+											</div>
+										</div>
+										<!--End Testimonial Single
+										<!--Start Testimonial Single
+										<div class="testimonial-single row">
+											<div class="col-sm-3">
+												<div class="client-info text-center">
+													<img src="assets/images/client-3.jpg" alt="">
+													<h4 class="font-600">Jhon Doe</h4>
+													<p>Designer</p>
+												</div>
+											</div>
+											<div class="col-sm-1">
+												<div class="testimonial-border"></div>
+											</div>
+											<div class="col-sm-8">
+												<div class="client-comment">
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, quam! Distinctio fugit asperiores, tenetur enim sint neque animi provident atque sed labore delectus esse repellat illum ea, in iste. Ratione!</p>
+													<span><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i></span><span class="float-right"><i class="icofont icofont-quote-right"></i></span>
+												</div>
+											</div>
+										</div>
+										<!--End Testimonial Single
 									</div>
+									<!--End Testimonial Carousel
 								</div>
-								<!--End Testimonial Row
+							</div>
+							<!--End Testimonial Row
 							</div>
 							<!--End Container
-						</section>
-						<!--End Testimonial Section-->
+							</section>
+							<!--End Testimonial Section-->
 						<!--Start Download App Section-->
 						<section id="app-download">
 							<!--Start Container-->
@@ -948,8 +1004,12 @@
 										<div class="app-download-content animated fadeInUp">
 											<h2 class="font-700 color-base text-uppercase wow fadeInUp" data-wow-delay="0.1s">Faça o Download da AnnA agora mesmo!</h2>
 											<!-- <p class="wow fadeInUp" data-wow-delay="0.2s">AnnA promove mudança comportamental duradoura através de método exclusivo que inclui conversação socrática e empática, prática do feedback e feedforward, e a trilogia pensar-sentir-fazer.</p> -->
-											<div class="app-download-btn btn-lg p-0 wow fadeInUp" data-wow-delay="0.3s">
-												<a class="gradient-bg-1" href="https://play.google.com/store/apps/details?id=br.com.qualinfo.h3skills" target="_blank"><i class="icofont icofont-brand-android-robot float-left"></i><span class="float-right text-center font-w-700"><small>Disponível na<br></small> Google Play</span></a><a class="gradient-bg-1" href="https://apps.apple.com/us/app/anna/id1482704535" target="_blank"><i class="icofont icofont-brand-apple float-left"></i><span class="float-right text-center font-w-700"><small>Disponível na<br></small> Apple Store</span></a>
+											<div class="about-btn btn-lg p-0 wow fadeInUp" data-wow-delay="0.3s">
+												<div class="remodal-bg">
+													<a class="gradient-bg-1" href="#modal" style="font-size: 25px ;"><i class="icofont icofont-download-alt" style="font-size: 25px;"></i> Baixar agora mesmo!</a>
+													<br><br>
+												</div>
+												<!-- <a class="gradient-bg-1" href="https://play.google.com/store/apps/details?id=br.com.qualinfo.h3skills" target="_blank"><i class="icofont icofont-brand-android-robot float-left"></i><span class="float-right text-center font-w-700"><small>Disponível na<br></small> Google Play</span></a><a class="gradient-bg-1" href="https://apps.apple.com/us/app/anna/id1482704535" target="_blank"><i class="icofont icofont-brand-apple float-left"></i><span class="float-right text-center font-w-700"><small>Disponível na<br></small> Apple Store</span></a> -->
 											</div>
 										</div>
 									</div>
@@ -1286,7 +1346,7 @@
 														<input type="email" class="form-control" placeholder="E-mail*" id="email" name="email" required>
 													</div>
 													<div class="form-group">
-														<input type="text" class="form-control" placeholder="Assunto" id="subject" name="subject">
+														<input type="text" class="form-control" placeholder="Assunto" id="subject" name="subject" required>
 													</div>
 													<div class="form-group">
 														<textarea class="form-control" rows="10" placeholder="Sua mensagem" id="message" name="message" required></textarea>
@@ -1374,5 +1434,62 @@
 					<script src="mailer/ajax-contact-form.js"></script>
 					<!--Main-->
 					<script src="assets/js/custom.js"></script>
+					<script src="assets/dist/remodal.js"></script>
+
+					<!-- Events -->
+					<script>
+						$(document).on('opening', '.remodal', function () {
+						  console.log('opening');
+						});
+						
+						$(document).on('opened', '.remodal', function () {
+						  console.log('opened');
+						});
+						
+						$(document).on('closing', '.remodal', function (e) {
+						  console.log('closing' + (e.reason ? ', reason: ' + e.reason : ''));
+						});
+						
+						$(document).on('closed', '.remodal', function (e) {
+						  console.log('closed' + (e.reason ? ', reason: ' + e.reason : ''));
+						});
+						
+						$(document).on('confirmation', '.remodal', function () {
+						  console.log('confirmation');
+						});
+						
+						$(document).on('cancellation', '.remodal', function () {
+						  console.log('cancellation');
+						});
+						//  Usage:
+						//  $(function() {
+						//
+						//    // In this case the initialization function returns the already created instance
+						//    var inst = $('[data-remodal-id=modal]').remodal();
+						//
+						//    inst.open();
+						//    inst.close();
+						//    inst.getState();
+						//    inst.destroy();
+						//  });
+						
+						//  The second way to initialize:
+						$('[data-remodal-id=modal2]').remodal({
+						  modifier: 'with-red-theme'
+						});
+					</script>
+					<script>
+						grecaptcha.ready(function() {
+							grecaptcha.execute("6LfGo-kUAAAAALH12UMrTuvmMaHcZrtuq15HSlmv", {
+							action: 'create'
+							}).then(function (token) {
+								var recaptchaResponse = document.getElementById('recaptchaResponse');
+								recaptchaResponse.value = token;
+
+								document.getElementById('submit_button').classList.remove('content_hidden');
+							});
+						});
+					</script>
+
 				</body>
 			</html>
