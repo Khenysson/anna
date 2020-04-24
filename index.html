@@ -1339,8 +1339,8 @@
 								<div class="contact-form-content">
 									<!--Start Row-->
 									<div class="row">
-										<!--Start Contact Form-->
-										<div class="col-md-6">
+										<!--Start Contact Form
+										<div hidden class="col-md-6">
 											<div class="contact-form">
 												<h3 class="font-600 text-center">Envie-nos uma mensagem</h3>
 												<form action="https://eusouanna.h3skills.com/api/v1/contact_email" method="post" id="ajax-contact">
@@ -1357,7 +1357,7 @@
 														<textarea class="form-control" rows="10" placeholder="Sua mensagem" id="message" name="message" required></textarea>
 													</div>
 													<!-- TOKEN DO CAPTCHAGOOGLE-->
-													<input id="recaptchaResponse" name="recaptcha_token" type="hidden">
+													<!-- <input id="recaptchaResponse" name="recaptcha_token" type="hidden">
 													<input class="content_hidden" name="page" type="hidden">
 													<div class="contact-btn">
 														<button class="font-500 gradient-bg-1 color-white" id="submit_button" type="submit">Enviar</button>
@@ -1448,11 +1448,11 @@
 					var formID = document.getElementById("form");
 					var send = $("#submit_button");
 
-$(formID).submit(function(event){
-  if (formID.checkValidity()) {
-    send.attr('disabled', 'disabled');
-  }
-});
+						$(formID).submit(function(event){
+						if (formID.checkValidity()) {
+							send.attr('disabled', 'disabled');
+						}
+						});
 						</script>
 						
 
@@ -1499,6 +1499,7 @@ $(formID).submit(function(event){
 						});
 					</script>
 					<script>
+						console.log('15151515151')
 						grecaptcha.ready(function() {
 							grecaptcha.execute("6LfGo-kUAAAAALH12UMrTuvmMaHcZrtuq15HSlmv", {
 							action: 'create'
