@@ -1,5 +1,4 @@
-<?php
-   
+<?php  
     $name 		= $_POST['name'];
     $email 		= $_POST['email'];
     $subject 	= $_POST['subject'];
@@ -19,5 +18,4 @@
         http_response_code(500);
         echo "Oops! Aconteceu algo de errado.";
     }
-
 ?>
