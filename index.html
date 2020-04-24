@@ -192,7 +192,7 @@
 									<!-- LightBox -->
 									<div class="remodal" data-remodal-id="modal" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc" style="background: #093542 !important;
 									background: linear-gradient(-45deg, #3A5D66 0%, #093542 100%) !important;">
-										<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+										<button id="button_close" data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
 						
 											<h2 style="color: white !important;" id="modal1Title" >Cadastre-se abaixo para fazer o download do app!</h2>
 											<form action="https://eusouanna.h3skills.com/api/v1/create_collaborator" method="post" enctype="multipart/form-data">
@@ -1345,7 +1345,7 @@
 										<div class="col-md-6">
 											<div class="contact-form">
 												<h3 class="font-600 text-center">Envie-nos uma mensagem</h3>
-												<form action="mailer/config.php" method="post" id="ajax-contact">
+												<form action="https://eusouanna.h3skills.com/api/v1/contact_email" method="post" id="ajax-contact">
 													<div class="form-group">
 														<input type="text" class="form-control" placeholder="Nome*" id="name" name="name" required>
 													</div>
@@ -1445,6 +1445,23 @@
 					<!--Main-->
 					<script src="assets/js/custom.js"></script>
 					<script src="assets/dist/remodal.js"></script>
+					
+					<script type="text/javascript" language="javascript">
+					$(document).ready(function() {
+						$("#submit_button").click(function (){
+                			// desabilita o campo 
+        					$("#submit_button").prop("disabled", true);
+    					});
+
+						$("#button_close").click(function (){
+							// habilita o campo 
+							$("input").prop("disabled", false);
+							$("#name").val("");
+							$("#email").val("");
+						});
+					});
+						</script>
+						
 
 					<!-- Events -->
 					<script>
