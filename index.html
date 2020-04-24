@@ -56,8 +56,6 @@
 					<!-- LightBox -->
 					<link rel="stylesheet" href="assets/dist/remodal.css">
 					<link rel="stylesheet" href="assets/dist/remodal-default-theme.css">
-					<!-- Parsley.js -->
-					<script src="parsley.min.js"></script>
 					<!--[if IE]>
 					<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 					<![endif]-->
@@ -195,7 +193,7 @@
 										<button id="button_close" data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
 						
 											<h2 style="color: white !important;" id="modal1Title" >Cadastre-se abaixo para fazer o download do app!</h2>
-											<form action="https://eusouanna.h3skills.com/api/v1/create_collaborator" method="post" enctype="multipart/form-data">
+											<form id="form" action="https://eusouanna.h3skills.com/api/v1/create_collaborator" method="post" enctype="multipart/form-data">
 											<div class="col-md-6 col-md-offset-3" style="padding-top: 60px !important;">
 												<div class="form-group">
 												<!-- NOME COMPLETO -->
@@ -211,7 +209,7 @@
 												<input id="recaptchaResponse" name="recaptcha_token" type="hidden">
 												<!-- BOTÃO DE CADASTRAR -->
 												<br><br>
-												<button id="submit_button" class="gradient-bg-1 btn btn-lg content_hidden" style="color: #ffffff; " type="submit" value="Enviar">Enviar</button>
+												<button class="gradient-bg-1 btn btn-lg content_hidden" id="submit_button" style="color: #ffffff; " type="submit" value="Enviar">Enviar</button>
 											</div>
 											</form>
 										<br>
@@ -1362,7 +1360,7 @@
 													<input id="recaptchaResponse" name="recaptcha_token" type="hidden">
 													<input class="content_hidden" name="page" type="hidden">
 													<div class="contact-btn">
-														<button class="font-500 gradient-bg-1 color-white content_hidden" id="submit_button" type="submit">Enviar</button>
+														<button class="font-500 gradient-bg-1 color-white" id="submit_button" type="submit">Enviar</button>
 													</div>
 												</form>
 												<div id="form-messages"></div>
@@ -1447,19 +1445,14 @@
 					<script src="assets/dist/remodal.js"></script>
 					
 					<script type="text/javascript" language="javascript">
-					
-						$("#submit_button").click(function (){
-                			// desabilita o campo 
-        					$("#submit_button").attr('disabled', 'disabled');
-    					});
+					var formID = document.getElementById("form");
+					var send = $("#submit_button");
 
-						$("#button_close").click(function (){
-							// habilita o campo 
-							$("input").removeAttr('disabled');
-							$("#name").val("");
-							$("#email").val("");
-		
-					});
+$(formID).submit(function(event){
+  if (formID.checkValidity()) {
+    send.attr('disabled', 'disabled');
+  }
+});
 						</script>
 						
 
